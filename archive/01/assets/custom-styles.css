@@ -1,0 +1,158 @@
+@font-face {
+font-family: 'Bungee';
+font-display: auto;
+src: url('Bungee-Regular.ttf');
+}
+
+
+body {background-color: #f3f5f9; color: #444;  border-top: 4px solid #0e3150;}
+.container {max-width: 1180px;}
+
+/* text styles ------------------------- */
+.page-title {font-family: 'Bungee', sans-serif; color:#0e3150; text-transform: uppercase;}
+.small {font-size: .87rem;}
+.text-gray {color: #5b6469;}
+.text-pipe {color: #c8cdd0;}
+.hand {cursor: pointer;}
+
+/* link styles ------------------------- */
+a {color: #23527c;}
+a.report {color: #5b6469;}
+a:hover {color: #efefef; text-decoration: none; background-color: #23527c;}
+a:focus {box-shadow: 0 0 0 1px #fff, 0 0 1px 2px #657b8f;}
+a.no-hover:hover {background-color: #f3f5f9;}
+.icon-hover:hover {color: #23527c;}
+
+footer * a {
+  text-decoration: underline;
+  color: #5b6469;
+}
+
+/* button and icon styles ------------------------- */
+.btn-blue-light {background: #d0d7dd; color: #0e3150;}
+.btn-blue-light:focus, .btn-blue-light.focus {box-shadow: 0 0 0 1px #fff, 0 0 3px 5px #657b8f;}
+.btn-blue-light:hover {background: #0e3150; color: #d0d7dd;}
+.btn:focus {box-shadow: 0 0 0 1px #fff, 0 0 3px 5px #657b8f;}
+.btn-link {color: #5b6469; text-decoration: none;}
+.btn-link:hover {background-color: #23527c; color: #efefef; text-decoration: none;}
+
+
+/* other styles ------------------------- */
+.border-iframe {border-top: 1px solid #333;}
+.ftr-top {margin-top: 1rem;}
+
+
+/* spinner styles ------------------------- */
+[v-cloak] > * { display: none; }
+[v-cloak]::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #23527c;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* embedded video styles ------------------------- */
+.video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+
+
+/* media queries ------------------------- */
+
+
+/* xSmall devices  */
+@media (min-width: 300px) and (max-width:500px){
+  h1 {font-size: 1.6rem;} /*1rem = 16px*/
+  h2 {font-size:1.2rem;}
+  h3 {font-size:1.1rem;}
+  body {border-top: none;}
+  .small {font-size:.85rem;}
+  .btn-light {margin-top: .75rem;}
+  .mt-3 {margin-top: .2rem !important;}
+  .mb-3 {margin-bottom: 1rem !important;}
+}
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 500px) and (max-width: 768px){
+  h1 {font-size:2.2rem;} /*1rem = 16px*/
+  h2 {font-size:1.4rem;}
+  h3 {font-size:1.2rem;}
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+ @media (min-width: 768px) {
+  h1 {font-size:2.8rem;} /*1rem = 16px*/
+  h2 {font-size:1.4rem;}
+  h3 {font-size:1.2rem;}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1440px){
+  h1 {font-size:2.8rem;} /*1rem = 16px*/
+  h2 {font-size:1.4rem;}
+  h3 {font-size:1.2rem;}
+  .container {max-width: 990px;}
+}
+
+/* icon size styles  ------------------------------------------------ */
+.icon-xs {
+  width: .75em;
+  height: .75em;
+  vertical-align: -.125em;
+}
+
+.icon-sm {
+  width: .875em;
+  height: .875em;
+  vertical-align: -.08em;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -.125em;
+}
+
+.icon-1-25x {
+  width: 1.25em;
+  height: 1.25em;
+  vertical-align: -.125em;
+}
+
+.icon-1-5x {
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: -.25em;
+}

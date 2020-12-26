@@ -1,0 +1,450 @@
+@font-face {
+    font-family: 'corbenbold';
+    src: url('../assets/corben-bold-webfont.woff2') format('woff2'),
+         url('../assets/corben-bold-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../assets/roboto-regular-webfont.woff2') format('woff2'),
+         url('../assets/roboto-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('../assets/roboto-bold-webfont.woff2') format('woff2'),
+         url('../assets/roboto-bold-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('../assets/roboto-medium-webfont.woff2') format('woff2'),
+         url('../assets/roboto-medium-webfont.woff') format('woff');
+}
+
+/* -- Variables ---------------------------------------------------------- */
+:root {
+  --title-text: 'corbenbold', sans-serif;
+  --headings-text: 'robotomedium', sans-serif;
+  --body-text: 'robotoregular', sans-serif;
+  --white: #fff;
+  --black: #000;
+  --base-grey: #efefef;
+  --lightmode-darkest: #252536;
+  --lightmode-dark: #004170;
+  --lightmode-medium: #0b578e;
+  --lightmode-grey-medium: #c6c9cc;
+  --lightmode-grey-light: #dee1e3;
+  --darkmode-darkest: #050b1a;
+  --darkmode-dark: #0b1733;
+  --darkmode-medium: #24cdd2;
+  --body-text-color: var(--lightmode-darkest);
+  --background: var(--lightmode-grey-light);
+  --title-color: var(--lightmode-medium);
+  --headings-color: var(--lightmode-dark);
+  --card-bg: var(--white);
+  --button-bg: var(--lightmode-grey-medium);
+  --button-color: var(--lightmode-darkest);
+  --link-color: var(--lightmode-dark);
+  --link-hover: var(--white);
+  --warning-bg: #f4c8cc;
+  --warning-color: #85000b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-text-color: var(--white);
+    --background: var(--darkmode-dark);
+    --title-color: var(--darkmode-medium);
+    --headings-color: var(--darkmode-medium);
+    --card-bg: var(--darkmode-darkest);
+    --button-bg: var(--darkmode-medium);
+    --button-color: var(--darkmode-darkest);
+    --link-color: var(--white);
+    --link-hover: var(--darkmode-medium);
+  }
+}
+
+
+/* -- Resets ---------------------------------------------------------- */
+
+/* Based on Andy Bell's Modern Reset
+https://github.com/hankchizljaw/modern-css-reset/blob/master/src/reset.css */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  /* min-height: 100vh; */
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* -- Global ------------------------------------------------------------- */
+
+body {
+  font-family: var(--body-text), sans-serif; /* update this to include OS fonts */
+  font-size: 1rem;
+  display: grid;
+  justify-content: center;
+  background: var(--background);
+  color: var(--body-text-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  background: var(--link-color);
+  color: var(--link-hover);
+  text-decoration: none;
+}
+
+/* -- Layout ------------------------------------------------------------- */
+
+main,
+footer {
+  max-width: 95vw;
+}
+
+ @media (min-width: 48rem) {
+  main,
+  footer {
+    min-width: 60vw;
+    max-width: 100vw;
+  }
+}
+
+.wrapper-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: .5rem;
+}
+
+@media (min-width: 48rem) {
+  .wrapper-details {
+    padding: 1rem;
+  }
+}
+
+/* -- Headings ----------------------------------------------------------- */
+
+h1 {
+  font-family: var(--title-text);
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin: .5rem 0;
+  color: var(--title-color);
+}
+
+@media (min-width: 48rem) {
+  h1 {
+    font-size: 2.4rem;
+    margin-top: .75rem;
+    margin-bottom: 1rem;
+  }
+}
+
+h2,
+h3 {
+  font-family: var(--headings-text);
+  color: var(--headings-color);
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+h3 {
+  margin-top: 1rem;
+}
+
+@media (min-width: 48rem) {
+  h2,
+  h3 {
+    margin-bottom: -.15rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* -- Replays ------------------------------------------------------------ */
+
+article {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  background: var(--card-bg);
+}
+
+.details {
+  line-height: 1.6;
+  font-size: .93rem;
+}
+
+@media (min-width: 48rem) {
+  .details {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.details li:nth-last-child(n+2) {
+  margin-right: 1.25rem;
+}
+
+.button-section {
+  margin-top: 1.25rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (min-width: 48rem) {
+  .button-section {
+    margin-top: .25rem;
+    display: block;
+    width: auto;
+  }
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: .75rem 1.25rem;
+  background: var(--button-bg);
+  color: var(--button-color);
+  cursor: pointer;
+}
+
+button:hover {
+  filter:brightness(1.05);
+}
+
+button:focus-within {
+   box-shadow: 0 0 0 0.25rem var(--headings-color);
+}
+
+/* -- Footer ----------------------------------------------------------- */
+footer {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+  margin-top: .5rem;
+}
+
+@media (min-width: 48rem) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: .9rem;
+  }
+}
+
+footer div:first-child {
+  margin-bottom: 1rem;
+}
+
+.report-button {
+  padding: .15rem 0;
+  padding-right: .25rem;
+}
+
+.report-button:hover .icon-1-25x,
+.report-button:hover .icon {
+  fill: var(--link-hover);
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+details {
+  margin-top: .25rem;
+}
+
+summary {
+  color: var(--link-color);
+  cursor: pointer;
+}
+
+.colophon-credits {
+  display: flex;
+}
+
+.colophon-credits li:first-of-type {
+  margin-right: 1rem;
+}
+
+.colophon-title {
+  color: var(--body-text-color);
+}
+
+.colophon-details {
+  margin-left: .75rem;
+  margin-top: .25rem;
+}
+
+.colophon-list li {
+  margin-left: .5rem;
+  line-height: 1.3;
+  margin-top: .5rem;
+}
+
+.colophon-list li:first-of-type {
+  margin-top: .25rem;
+}
+
+
+/* -- Alert -------------------------------------------------------------- */
+[role="alert"] {
+  background: var(--warning-bg);
+  padding: .75rem;
+  color: var(--warning-color);
+}
+
+[role="alert"] .icon-1-5x {
+  margin-right: .25rem;
+  fill: var(--warning-color);
+}
+
+/* -- Icons -------------------------------------------------------------- */
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -.125em;
+}
+
+.icon-1-25x {
+  width: 1.25em;
+  height: 1.25em;
+  vertical-align: -.2em;
+}
+
+.icon-1-5x {
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: -.25em;
+}
+
+.icon-link:hover {
+  background: none;
+}
+
+.icon:hover,
+.icon-1-25x:hover {
+  fill: var(--link-hover);
+  background: none;
+}
+
+footer .icon, .icon-1-25x {
+  fill: var(--link-color);
+}
+
+.colophon .icon {
+  margin-left: .15rem;
+}
+
+
+/* -- Video player ------------------------------------------------------- */
+.video-player {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-player iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+/* -- No JS ------------------------------------------------------- */
+
+.alert-no-js {
+  border: 1px solid var(--title-color);
+  background: var(--card-bg);
+  padding: .75rem;
+  margin-bottom: .5rem;
+  color: var(--title-color);
+}
+
+.alert-no-js .icon-1-5x {
+  margin-right: .25rem;
+  fill: var(--title-color);
+}

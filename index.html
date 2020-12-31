@@ -50,6 +50,7 @@
                   <li><span class="visually-hidden">Track:</span>{{ item['fields']['track'] }}</li>
                   <li v-if="item['fields']['announcer']">Announcer: {{ item['fields']['announcer'] }}</li>
                 </ul>
+                <span v-if="item['fields']['DH winner']" class="visually-hidden">This race was a dead heat and has two winners.</span>
                 <h3><span class="visually-hidden">Winner:</span> {{ item['fields']['winner'] }}</h3>
                 <ul class="details">
                   <li>Jockey: {{ item['fields']['jockey'] }}</li>
@@ -57,7 +58,7 @@
                   <li v-if="item['fields']['chart-link']"><a :href="item['fields']['chart-link']" aria-label="Equibase Chart, opens in a new window or tab" rel="noopener noreferrer" target="_blank">Equibase Chart</a></li>
                 </ul>
                 <span v-if="item['fields']['DH winner']">
-                  <h3>{{ item['fields']['DH winner'] }}</h3>
+                  <h3><span class="visually-hidden">Winner:</span> {{ item['fields']['DH winner'] }}</h3>
                   <ul class="details">
                     <li>Jockey: {{ item['fields']['DH jockey'] }}</li>
                     <li>Trainer: {{ item['fields']['DH trainer'] }}</li>

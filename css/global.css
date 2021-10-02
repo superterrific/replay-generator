@@ -43,7 +43,6 @@
     font-display: swap;
 }
 
-
 /* -- Variables ---------------------------------------------------------- */
 :root {
   --title-text: 'corbenbold', sans-serif;
@@ -478,6 +477,10 @@ footer .icon, .icon-1-25x {
     height:100%;
     width:100%;
     position:absolute;
+}
+
+iframe {
+  border: unset;
 }
 
 /* -- No JS and 404 ------------------------------------------------------- */

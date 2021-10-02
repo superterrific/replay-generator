@@ -19,7 +19,7 @@
   <meta name="twitter:image" content="https://replaygenerator.com/img/RRG-sm.png">
   <meta name="twitter:image:alt" content="Decorative image for the Random Replay Generator">
   <meta name="twitter:description" content="Making it easy to binge-watch Thoroughbred horse racing replays">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎥</text></svg>">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml" />
   <title>Random Replay Generator</title>
   <link rel="stylesheet" href="./css/global.css">
 </head>
@@ -32,7 +32,7 @@
           <div v-for="item in items">
             <script>document.getElementById('app').classList.remove('no-js');</script>
             <div class="video-player">
-              <iframe  :src="'https://www.youtube-nocookie.com/embed/' + item['fields']['replay-id']" title="Random replay from YouTube" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe :src="'https://www.youtube-nocookie.com/embed/' + item['fields']['replay-id']" title="Random replay from YouTube" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
             <div v-if="item['fields']['Warning']" role="alert">

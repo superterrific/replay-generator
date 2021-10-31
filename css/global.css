@@ -224,7 +224,6 @@ a:focus {
   }
 }
 
-
 /* -- Headings ----------------------------------------------------------- */
 h1 {
   font-family: var(--title-text);
@@ -335,16 +334,15 @@ button:focus-within {
 }
 
 /* -- Footer ----------------------------------------------------------- */
-footer {
+.wrapper-footer {
   display: flex;
   flex-direction: column;
   line-height: 1.6;
   margin-top: .5rem;
-  margin-bottom: 1rem;
 }
 
 @media (min-width: 48rem) {
-  footer {
+  .wrapper-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -353,7 +351,7 @@ footer {
   }
 }
 
-footer div:first-child {
+.wrapper-footer div:first-child {
   margin-bottom: 1rem;
 }
 
@@ -367,34 +365,18 @@ footer div:first-child {
   fill: var(--link-hover);
 }
 
-footer p {
+.wrapper-footer p {
   margin-bottom: .25rem;
 }
 
-details {
-  margin-top: .25rem;
-}
 
-summary {
-  color: var(--link-color);
-  cursor: pointer;
-}
-
-.colophon-credits {
+ .colophon-credits {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .colophon-credits li:first-of-type {
   margin-right: 1rem;
-}
-
-.colophon-title {
-  color: var(--body-text-color);
-}
-
-.colophon-details {
-  margin-left: .75rem;
-  margin-top: .25rem;
 }
 
 .colophon-list li {
@@ -403,8 +385,14 @@ summary {
   margin-top: .5rem;
 }
 
-.colophon-list li:first-of-type {
-  margin-top: .25rem;
+.kofi {
+  display: flex;
+  justify-content: center;
+  margin: .5rem auto 1.5rem;
+}
+
+.kofi a:hover {
+  background: unset;
 }
 
 #total-replays {

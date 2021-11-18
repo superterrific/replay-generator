@@ -46,7 +46,7 @@
 
             <div class="wrapper-details">
               <div class="details-section">
-                <h2 class="fluid-type">{{ item['fields']['year'] }} {{ item['fields']['race-name'] }}</h2>
+                <h2 class="fluid-type"><time :datetime="item['fields']['year']">{{ item['fields']['year'] }}</time> {{ item['fields']['race-name'] }}</h2>
                 <ul class="details">
                   <li><span class="visually-hidden">Track:</span>{{ item['fields']['track'] }}</li>
                   <li v-if="item['fields']['announcer']">Announcer: {{ item['fields']['announcer'] }}</li>

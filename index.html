@@ -21,6 +21,7 @@
   <meta name="twitter:description" content="Making it easy to binge-watch Thoroughbred horse racing replays">
   <meta name="monetization" content="$ilp.uphold.com/xmqJRMpPdie4">
   <script defer data-domain="replaygenerator.com" src="https://plausible.io/js/plausible.js"></script>
+  <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
   <link rel="icon" href="/img/favicon.png" type="image/png" />
   <title>Random Replay Generator</title>
   <link rel="stylesheet" href="./css/global.css">
@@ -68,7 +69,7 @@
                 </span>
               </div>
               <div class="button-section">
-                <button @click="loadItems" class="">Gimme Another Replay!</button>
+                <button @click="loadItems" class="" data-analytics='"Replay loaded"'>Gimme Another Replay!</button>
               </div>
             </div>
           </div>
@@ -125,6 +126,7 @@
 
     </footer>
   </div>
+<script src="./js/plausible-event.js" defer></script>
 <script src="./js/main.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>

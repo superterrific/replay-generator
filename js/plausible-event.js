@@ -1,6 +1,6 @@
 // Handle button form events - those that have data-analytics
 elements = document.querySelectorAll("button[data-analytics]");
-registerAnalyticsEvents(elements, handleFormEvent);
+registerAnalyticsEvents(elements, handleLinkEvent);
 
 /**
 * Iterate Elements and add event listener

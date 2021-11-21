@@ -58,7 +58,7 @@ function handleFormEvent(event) {
     registerEvent(event.target.getAttribute('data-analytics'));
 
     setTimeout(function () {
-        event.target.form.submit();
+        event.target;
     }, 150);
 }
 

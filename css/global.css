@@ -271,7 +271,7 @@ h2.fluid-type {
  --fluid-type-max-size: 1.45;
 }
 
-.load-replays.fluid-type {
+button.fluid-type {
   --fluid-type-min-size: 1.15;
   --fluid-type-max-size: 1.05;
 }
@@ -314,7 +314,7 @@ article {
   }
 }
 
-.load-replay {
+button {
   border: none;
   outline: none;
   padding: .9rem 1.25rem;
@@ -325,11 +325,11 @@ article {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-a.load-replay:hover {
+button:hover {
   filter:brightness(2);
 }
 
-a.load-replay:focus-within {
+button:focus-within {
    box-shadow: 0 0 0 0.25rem var(--button-focus);
 }
 

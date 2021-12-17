@@ -56,7 +56,7 @@
   --dark-blue: #0b1733;
   --torquise: #24cdd2;
   --purple: #310694;
-  --purple-dark: #160342;
+  --purple-dark: #100132;
   --purple-light: #e8dffe;
   --youtube-red: #f00;
   --body-text-color: var(--darkest-blue);
@@ -317,7 +317,7 @@ article {
 button {
   border: none;
   outline: none;
-  padding: .9rem 1.25rem;
+  padding: 1rem 1.25rem;
   background: var(--button-bg);
   color: var(--button-color);
   cursor: pointer;
@@ -368,7 +368,6 @@ button:focus-within {
 .wrapper-footer p {
   margin-bottom: .25rem;
 }
-
 
  .colophon-credits {
   display: flex;
@@ -452,22 +451,14 @@ footer .icon, .icon-1-25x {
 
 /* -- Video player ------------------------------------------------------- */
 .video-player {
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position:relative;
-    height:0;
     background: var(--black);
-      border: 1px solid var(--title-color);
-}
-.video-player iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
-}
+    border: 1px solid var(--title-color);
+  }
 
 iframe {
+	aspect-ratio: 16 / 9;
+	height: 100%;
+	width: 100%;
   border: unset;
 }
 

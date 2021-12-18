@@ -1,5 +1,5 @@
 //update total amount of replays
-let totalReplays = 910;
+let totalReplays = 930;
 
 const app = new Vue({
   el: '#app',

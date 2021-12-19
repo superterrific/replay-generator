@@ -317,7 +317,7 @@ article {
 button {
   border: none;
   outline: none;
-  padding: 1rem 1.25rem;
+  padding: .85rem 1.25rem;
   background: var(--button-bg);
   color: var(--button-color);
   cursor: pointer;

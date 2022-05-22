@@ -58,6 +58,7 @@
   --purple: #310694;
   --purple-dark: #100132;
   --purple-light: #e8dffe;
+  --purple-accent-dark: #1f0522;
   --youtube-red: #f00;
   --body-text-color: var(--darkest-blue);
   --background: var(--chalk-blue);
@@ -76,14 +77,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --body-text-color: var(--white);
-    --background: var(--purple-dark);
+    --body-text-color: var(--purple-light);
+    --background: var(--purple-accent-dark);
     --title-color: var(--torquise);
     --headings-color: var(--torquise);
     --card-bg: var(--darkest-blue);
+    --card-border: unset;
+    --details-bg: #390a3f;
     --button-bg: var(--torquise);
     --button-color: var(--darkest-blue);
-    --link-color: var(--white);
+    --link-color: var(--purple-light);
     --link-hover: var(--background);
   }
 }
@@ -206,11 +209,11 @@ a:focus {
 
 @media (min-width: 120rem) {
  .wrapper {
-   /* min-width: 70vw; */
  }
 }
 
 .wrapper-details {
+  background: var(--details-bg);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -349,7 +352,6 @@ button:focus {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* font-size: .9rem; */
   }
 }
 
@@ -454,7 +456,7 @@ footer .icon, .icon-1-25x {
 /* -- Video player ------------------------------------------------------- */
 .video-player {
     background: var(--black);
-    border: 1px solid var(--title-color);
+    border: 1px solid var(--card-border);
   }
 
 iframe {
